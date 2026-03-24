@@ -32,3 +32,18 @@
 - Latency increases sharply when the working set exceeds cache capacity
 - Cache level boundaries (L1 → L2 → L3 → DRAM) become clearly observable
 - Useful for exposing true cache latency and replacement behavior in microbenchmarks
+
+
+## Predictions for Naive Matrix Transpose
+
+Assumptions:
+- Matrix stored in row-major order
+- Element size: 8 bytes (double)
+- Cache line: 64 bytes → 8 elements per line
+
+Predictions:
+- Reading A[i][j] should have good spatial locality
+- Writing B[j][i] should cause frequent cache misses
+- Each write likely touches a new cache line
+- L1 miss rate expected to be high
+- Performance expected to be memory-latency bound, not compute bound

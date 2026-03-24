@@ -197,24 +197,6 @@ Recursive algorithms that work optimally at all levels of the cache hierarchy wi
 - **Strided:** Poor locality, frequent cache misses
 - **Blocked:** Balanced locality at all cache levels
 
-## Customization
-
-### Adjusting Matrix Size
-Edit `main.cpp` and implementation files:
-```cpp
-const int N = 2048;  // Change to desired size
-```
-
-### Adding New Block Sizes
-Add new function in `blocked_transpose.cpp`:
-```cpp
-void transpose_blocked_128(double A[N][N], double B[N][N]) {
-    const int BLOCK_SIZE = 128;
-    // ... implementation
-}
-```
-
-Then add to benchmark in `main.cpp`.
 
 ## References
 
@@ -222,6 +204,3 @@ Then add to benchmark in `main.cpp`.
 - **Loop Tiling:** Wolfe, "High Performance Compilers for Parallel Computing"
 - **Cache Performance:** Hennessy & Patterson, "Computer Architecture: A Quantitative Approach"
 
-## License
-
-This project is provided for educational purposes.

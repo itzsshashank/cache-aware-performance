@@ -9,7 +9,7 @@ void transpose_blocked_8(double A[N][N], double B[N][N]) {
     
     for (int i = 0; i < N; i += BLOCK_SIZE) {
         for (int j = 0; j < N; j += BLOCK_SIZE) {
-            // Transpose the block
+            // Transposing the block
             for (int bi = i; bi < i + BLOCK_SIZE && bi < N; bi++) {
                 for (int bj = j; bj < j + BLOCK_SIZE && bj < N; bj++) {
                     B[bj][bi] = A[bi][bj];
@@ -25,7 +25,7 @@ void transpose_blocked_16(double A[N][N], double B[N][N]) {
     
     for (int i = 0; i < N; i += BLOCK_SIZE) {
         for (int j = 0; j < N; j += BLOCK_SIZE) {
-            // Transpose the block
+            // Transposing the block
             for (int bi = i; bi < i + BLOCK_SIZE && bi < N; bi++) {
                 for (int bj = j; bj < j + BLOCK_SIZE && bj < N; bj++) {
                     B[bj][bi] = A[bi][bj];
@@ -41,7 +41,7 @@ void transpose_blocked_32(double A[N][N], double B[N][N]) {
     
     for (int i = 0; i < N; i += BLOCK_SIZE) {
         for (int j = 0; j < N; j += BLOCK_SIZE) {
-            // Transpose the block
+            // Transposing the block
             for (int bi = i; bi < i + BLOCK_SIZE && bi < N; bi++) {
                 for (int bj = j; bj < j + BLOCK_SIZE && bj < N; bj++) {
                     B[bj][bi] = A[bi][bj];
@@ -57,7 +57,7 @@ void transpose_blocked_64(double A[N][N], double B[N][N]) {
     
     for (int i = 0; i < N; i += BLOCK_SIZE) {
         for (int j = 0; j < N; j += BLOCK_SIZE) {
-            // Transpose the block
+            // Transposingg the block
             for (int bi = i; bi < i + BLOCK_SIZE && bi < N; bi++) {
                 for (int bj = j; bj < j + BLOCK_SIZE && bj < N; bj++) {
                     B[bj][bi] = A[bi][bj];
